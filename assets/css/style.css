@@ -1,0 +1,194 @@
+/* Fontes */
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../fonts/GothamMedium.otf);
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/GothamBook.otf);
+}
+
+body{
+    font-family: 'GothamMedium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .logo {
+    width: 120px;
+    margin-left: 20px;
+}
+
+header ul, header li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #393C41;
+}
+
+header .middle {
+    margin-left: 96px;
+}
+
+header .middle ul {
+    display: flex;
+}
+
+header .middle li {
+    margin: 0 20px;
+}
+
+header .rightside ul {
+    display: flex;
+}
+
+header .rightside li {
+    margin: 0 20px;
+}
+
+main {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+section {
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+main .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+    flex-direction: column;
+}
+
+main h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+    color: #393C41;
+}
+
+main h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'GothamBook', Helvetica, Arial;
+    color: #6E7378;
+}
+
+main h2 a {
+    color: #393C41;
+}
+
+main h2 a:hover {
+    color: #000;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+}
+
+footer .buttons--area {
+    display: flex;
+    justify-content: center;
+}
+
+footer .buttons--area a {
+    display: block;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 0 10px;
+}
+
+footer .btn--dark {
+    background-color: rgba(23, 26, 32, 0.8);
+    color: #FFFFFF;
+}
+
+footer .btn--light {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #000;
+}
+
+footer .arrow-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 30px;
+}
+
+@keyframes arrow{ /*Animacao da seta*/
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+footer .down {
+    height: 15px;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 1200px) {
+    header .middle {
+        display: none;
+    }
+    header .rightside li {
+        display: none;
+    }
+    header .rightside li.menu {
+        display: block;
+        background-color:rgba(23, 26, 32, 0.05);
+        padding: 10px;
+        border-radius: 30px;
+        width: 43px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    footer .buttons--area {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .buttons--area a {
+        margin: 10px 20px;
+    }
+}
